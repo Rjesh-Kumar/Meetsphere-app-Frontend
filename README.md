@@ -1,12 +1,62 @@
-# React + Vite
+# MeetSphere Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React-based meetup events browser with search, filtering, and detailed event views. Connects to MeetSphere API backend.
 
-Currently, two official plugins are available:
+## Demo Link
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Live Demo]()
 
-## Expanding the ESLint configuration
+## Quick Start
+git clone: https://github.com/Rjesh-Kumar/Meetsphere-app-Frontend.git
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+cd meetsphere-frontend
+
+npm install
+
+npm run dev
+
+
+## Technologies
+
+- React 19 
+- React Router 
+- Vite 
+- Bootstrap 5 
+- Bootstrap Icons 
+
+## Features
+
+**Event List (/):**  
+- Browse all meetup events in card layout  
+- Real-time search by title/tags  
+- Filter by type (Online/Offline/Both)  
+- Click card to view event details  
+
+**Event Details (/events/:id):**  
+- Full event information (title, description, venue, price)  
+- Speakers list with photos/roles  
+- Event timing (IST), tags, dress code, age restrictions  
+- Back to list navigation  
+
+## API Reference
+
+**Backend:** `https://meetup-app-backend-chi.vercel.app`
+
+GET /events
+
+List all events  
+Sample Response: `{ "events": [{ _id, title, type, tags, date, thumbnailUrl, ... }] }`
+
+GET /events/search?type=Online&q=react
+
+Search/filter events  
+Sample Response: `{ "events": [filtered results] }`
+
+GET /events/:id
+
+Single event details  
+Sample Response: `{ "event": { title, description, sessions, speakers, venue, price, ... } }`
+
+## Contact
+
+For bugs or feature requests: rajeshkumarrour40@gmail.com 
